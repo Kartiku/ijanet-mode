@@ -101,9 +101,9 @@ This is a simple wrapper around the built-in `split-string'."
   (progn
     (let ((content (ijanet-split "\n" (buffer-substring-no-properties begin end)) ))
 
-      (print (buffer-substring-no-properties (region-beginning) (region-end)))
-      (print content)
-      (print (buffer-substring-no-properties begin end))
+      ;; (print (buffer-substring-no-properties (region-beginning) (region-end)))
+      ;; (print content)
+      ;; (print (buffer-substring-no-properties begin end))
       (maintain-indentation content  0)
   )
     (comint-send-string ijanet-shell-buffer-name "\n")))
